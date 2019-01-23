@@ -22,3 +22,7 @@ function lenvenshteinDistance(s, t) {
     return d[sLen][tLen];
 }
 ```
+   ### After this method is tested by data, the result is:
+   #### There are 1318 questions and 1319 standards.
+   #### Correctly matched 413 questions.
+   #### Matching accuracy was: 0.3133535660091047 .
