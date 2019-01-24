@@ -203,8 +203,7 @@ let checkData = [
     '60岁以上如何开立信用账户？',
     'st股票在什么情况下退市？'];
 
-let questions =
-'自助开户的第三方存管要怎么补办？\n' +
+let questions = '自助开户的第三方存管要怎么补办？\n' +
 '自助开户三方存管\n' +
 '手机App里开户后，如何绑定第三方存管\n' +
 '自助开户后如何补办三方存管？\n' +
@@ -1520,10 +1519,9 @@ let questions =
 '70岁以上老人能在手机上开户吗？\n' +
 '信用账户60岁以上怎么开立？\n' +
 '有什么办法开立信用账户在60岁以上？\n' +
-'*st股票会在哪些情况下退市呢？\n';
+'*st股票会在哪些情况下退市呢？';
 
-let answer = 
-'自助开户后如何补办三方存管？\n' +
+let answer = '自助开户后如何补办三方存管？\n' +
 '自助开户后如何补办三方存管？\n' +
 '自助开户后如何补办三方存管？\n' +
 '自助开户后如何补办三方存管？\n' +
@@ -2839,7 +2837,7 @@ let answer =
 '70岁以上自然人可以手机开户吗?\n' +
 '60岁以上如何开立信用账户？\n' +
 '60岁以上如何开立信用账户？\n' +
-'*st股票在什么情况下退市？\n';
+'*st股票在什么情况下退市？';
 function lenvenshteinDistance(s, t) {
     let sLen = s.length;
     let tLen = t.length;
@@ -2886,6 +2884,7 @@ function findBest(event) {
 
 function getAccuracy() {
     let span = document.querySelectorAll('span')[1];
+    console.log(answer.replace(/\n/g, ","))
     let que = questions.split('\n');
     let ans = answer.split('\n');
     let total = queLen = que.length;
