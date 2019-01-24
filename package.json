@@ -1,0 +1,20 @@
+{
+  "name": "text-similarity-algorithm",
+  "version": "1.0.0",
+  "description": "```js\r function lenvenshteinDistance(s, t) {\r     let sLen = s.length;\r     let tLen = t.length;\r     let substitutionCost = 0;\r     let d = [];\r     // 初始化\r     d[0] = [];\r     for(let i = 0; i <= tLen; i ++) d[0][i] = i;\r     // 打表\r     for(let i = 1; i <= sLen; i ++) {\r         d[i] = [i];\r         for(let j = 1; j <= tLen; j ++) {\r             if(s[i - 1] === t[j - 1]) {\r                 substitutionCost = 0;\r             }else substitutionCost = 1;\r             d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + substitutionCost)\r         }\r     }\r     return d[sLen][tLen];\r }\r ```\r    ### After this method is tested by data, the result is:\r    #### There are 1318 questions and 1318 standards.\r    #### Correctly matched 541 questions.\r    #### Matching accuracy was: 0.41047040971168436 .",
+  "main": "LevenshteinDistance.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yewenjunfighting/Text-similarity-algorithm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yewenjunfighting/Text-similarity-algorithm/issues"
+  },
+  "homepage": "https://github.com/yewenjunfighting/Text-similarity-algorithm#readme",
+  "dependencies": {}
+}
