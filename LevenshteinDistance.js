@@ -2884,7 +2884,7 @@ function findBest(event) {
 
 function getAccuracy() {
     let span = document.querySelectorAll('span')[1];
-    console.log(answer.replace(/\n/g, ","))
+    console.log(questions.replace(/\n/g, "|"))
     let que = questions.split('\n');
     let ans = answer.split('\n');
     let total = queLen = que.length;
