@@ -59,7 +59,7 @@ def getCosineSimilarity(str1, str2):
    #### Matching accuracy was: 0.554290053151
 
 ## SimHash
-    ```python
+```python
     class SimHaming:
     '''利用64位数，计算海明距离'''
     def haming_distance(self, code_s1, code_s2):
@@ -96,4 +96,4 @@ def getCosineSimilarity(str1, str2):
         similarity = (100 - self.haming_distance(code_s1,code_s2)*100/64)/100
         return similarity
 
-    ```
+ ```
