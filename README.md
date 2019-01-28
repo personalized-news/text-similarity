@@ -186,3 +186,5 @@ class SimVsm:
         similarity = cos1 / float(cos21 * cos22)
         return similarity
 ```
+#### Correctly matched 710 questions
+#### The correct rate is: 0.5391040242976461
