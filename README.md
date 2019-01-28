@@ -97,6 +97,8 @@ def getCosineSimilarity(str1, str2):
         return similarity
 
  ```
+ #### Correctly matched 710 questions
+ #### The correct rate is: 0.5391040242976461
  ## tokenVector 
  ```python
  class SimTokenVec:
