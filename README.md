@@ -139,8 +139,12 @@ def getCosineSimilarity(str1, str2):
         word_list2=[word for word in text2]
         return self.similarity_cosine(word_list1,word_list2)
  ```
- #### Correctly matched 900 questions
- #### The correct rate is: 0.683371298405467
+ ## word vector: sgns.financial.bigram-char test result
+  #### Correctly matched 794 questions
+  #### The correct rate is: 0.6028853454821564
+ ## word vector: token_vector.bin test result
+   #### Correctly matched 900 questions
+   #### The correct rate is: 0.683371298405467
 ## Vector space model
 ```python
 class SimVsm:
