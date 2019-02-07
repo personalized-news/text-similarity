@@ -57,8 +57,6 @@ def getCosineSimilarity(str1, str2):
 ```
    #### Correctly matched 730 questions.
    #### Matching accuracy was: 0.554290053151
-
-## The following three methods are transferred from https://github.com/liuhuanyong/SentenceSimilarity
 ## SimHash
 ```python
     class SimHaming:
