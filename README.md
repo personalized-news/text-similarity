@@ -1,5 +1,13 @@
-# Text similarity algorithm
+# text similarity algorithm
+
+- [Levenshtein distance javaScript version](#levenshtein-distance-javaScript-version)
+- [Cosine similarity python version](#cosine-similarity-python-version)
+- [SimHash](#simHash)
+- [tokenVector ](#tokenVector)
+- [Vector space model](#vector-space-model)
+
 ## Levenshtein distance javaScript version
+
 ```js
 function lenvenshteinDistance(s, t) {
     let sLen = s.length;
@@ -22,11 +30,15 @@ function lenvenshteinDistance(s, t) {
     return d[sLen][tLen];
 }
 ```
-   ### After this method is tested by data, the result is:
-   #### There are 1317 questions and 1317 standards.
-   #### Correctly matched 541 questions.
-   #### Matching accuracy was: 0.41078208048595294
+
+### After this method is tested by data, the result is:
+#### There are 1317 questions and 1317 standards.
+#### Correctly matched 541 questions.
+#### Matching accuracy was: 0.41078208048595294
+
+
 ## Cosine similarity python version
+
 ```python
 def getCosineSimilarity(str1, str2):
     words = set() # 创建集合
@@ -55,9 +67,13 @@ def getCosineSimilarity(str1, str2):
         vector_length_product2 += num2 * num2
     return vector_product / numpy.sqrt(vector_length_product1 * vector_length_product2)
 ```
-   #### Correctly matched 730 questions.
-   #### Matching accuracy was: 0.554290053151
+
+#### Correctly matched 730 questions.
+#### Matching accuracy was: 0.554290053151
+
+
 ## SimHash
+
 ```python
     class SimHaming:
     '''利用64位数，计算海明距离'''
@@ -94,13 +110,16 @@ def getCosineSimilarity(str1, str2):
         code_s2 = self.get_code(s2)
         similarity = (100 - self.haming_distance(code_s1,code_s2)*100/64)/100
         return similarity
-
  ```
- #### Correctly matched 710 questions
- #### The correct rate is: 0.5391040242976461
- ## tokenVector 
- ```python
- class SimTokenVec:
+
+#### Correctly matched 710 questions
+#### The correct rate is: 0.5391040242976461
+
+
+## tokenVector 
+
+```python
+class SimTokenVec:
 
     def __init__(self):
         self.embedding_path = './model/token_vector.bin'
@@ -136,14 +155,18 @@ def getCosineSimilarity(str1, str2):
         word_list1=[word for word in text1]
         word_list2=[word for word in text2]
         return self.similarity_cosine(word_list1,word_list2)
- ```
- ## word vector: sgns.financial.bigram-char test result
-  #### Correctly matched 794 questions
-  #### The correct rate is: 0.6028853454821564
- ## word vector: token_vector.bin test result
-   #### Correctly matched 900 questions
-   #### The correct rate is: 0.683371298405467
+```
+
+### word vector: sgns.financial.bigram-char test result
+#### Correctly matched 794 questions
+#### The correct rate is: 0.6028853454821564
+### word vector: token_vector.bin test result
+#### Correctly matched 900 questions
+#### The correct rate is: 0.683371298405467
+
+
 ## Vector space model
+
 ```python
 class SimVsm:
 
@@ -189,5 +212,6 @@ class SimVsm:
         similarity = cos1 / float(cos21 * cos22)
         return similarity
 ```
+
 #### Correctly matched 710 questions
 #### The correct rate is: 0.5391040242976461
