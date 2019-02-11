@@ -8,6 +8,8 @@
 
 ## Levenshtein distance javaScript version
 
+> 1317 questions and 1317 standards. Correctly matched 541 questions. Matching accuracy: 0.41078208048595294
+
 ```js
 function lenvenshteinDistance(s, t) {
     let sLen = s.length;
@@ -31,13 +33,10 @@ function lenvenshteinDistance(s, t) {
 }
 ```
 
-### After this method is tested by data, the result is:
-#### There are 1317 questions and 1317 standards.
-#### Correctly matched 541 questions.
-#### Matching accuracy was: 0.41078208048595294
-
 
 ## Cosine similarity python version
+
+> Correctly matched 730 questions. Matching accuracy was: 0.554290053151
 
 ```python
 def getCosineSimilarity(str1, str2):
@@ -68,11 +67,10 @@ def getCosineSimilarity(str1, str2):
     return vector_product / numpy.sqrt(vector_length_product1 * vector_length_product2)
 ```
 
-#### Correctly matched 730 questions.
-#### Matching accuracy was: 0.554290053151
-
 
 ## SimHash
+
+> Correctly matched 710 questions. Correct rate is: 0.5391040242976461
 
 ```python
     class SimHaming:
@@ -112,11 +110,12 @@ def getCosineSimilarity(str1, str2):
         return similarity
  ```
 
-#### Correctly matched 710 questions
-#### The correct rate is: 0.5391040242976461
 
+## tokenVector
 
-## tokenVector 
+> word vector: sgns.financial.bigram-char test result: Correctly matched 794 questions, Correct rate is: 0.6028853454821564
+
+> word vector: token_vector.bin test result: correctly matched 900 questions, Correct rate is: 0.683371298405467
 
 ```python
 class SimTokenVec:
@@ -157,15 +156,11 @@ class SimTokenVec:
         return self.similarity_cosine(word_list1,word_list2)
 ```
 
-### word vector: sgns.financial.bigram-char test result
-#### Correctly matched 794 questions
-#### The correct rate is: 0.6028853454821564
-### word vector: token_vector.bin test result
-#### Correctly matched 900 questions
-#### The correct rate is: 0.683371298405467
-
 
 ## Vector space model
+
+> Correctly matched 710 questions. Correct rate is: 0.5391040242976461
+
 
 ```python
 class SimVsm:
@@ -212,6 +207,3 @@ class SimVsm:
         similarity = cos1 / float(cos21 * cos22)
         return similarity
 ```
-
-#### Correctly matched 710 questions
-#### The correct rate is: 0.5391040242976461
