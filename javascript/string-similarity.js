@@ -9,15 +9,8 @@ function getAccuracy() {
   let correct = 0;
 
   for (let i = 0; i < queLen; i++) {
-    let max = 0, matchStr;
-    for (let j = 0; j < checkDataLen; j++) {
-      const degree = stringSimilarity.compareTwoStrings(questions[i], checkData[j]);
-      if (degree >= max) {
-        max = degree;
-        matchStr = checkData[j];
-      }
-    }
-    if (matchStr === answer[i]) {
+    const res = stringSimilarity.findBestMatch(questions[i], checkData);
+    if (res.bestMatch.target === answer[i]) {
       correct++;
     }
   }
