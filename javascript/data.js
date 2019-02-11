@@ -2842,7 +2842,7 @@ const answer = '自助开户后如何补办三方存管？\n' +
 '*st股票在什么情况下退市？';
 
 module.exports = {
-  answer,
   checkData,
-  questions,
+  answer: answer.split('\n'),
+  questions: questions.split('\n'),
 };

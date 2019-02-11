@@ -50,26 +50,24 @@ function findBest(event) {
 function getAccuracy() {
     // const span = document.querySelectorAll('span')[1];
     // console.log(questions.replace(/\n/g, "|"))
-    const que = questions.split('\n');
-    const ans = answer.split('\n');
-    const total = que.length, queLen = que.length;
+    const total = questions.length, queLen = questions.length;
     let correct = 0;
     let min, matchStr;
     const checkDataLen = checkData.length;
     for(let i = 0; i < queLen; i ++) {
         min = 1000;
         for(let j = 0; j < checkDataLen; j ++) {
-            const step = lenvenshteinDistance(que[i], checkData[j])
+            const step = lenvenshteinDistance(questions[i], checkData[j])
             if(step <= min) {
                 min = step
                 matchStr = checkData[j];
             }
         }
-        if(matchStr === ans[i]) {
+        if(matchStr === answer[i]) {
             correct++;
         }
     }
-    console.log(`共有${que.length}几个问题,有${ans.length}个标准问\n` + `正确匹配了${correct}个问题 ` + '匹配正确率为：' + correct / total);
+    console.log(`共有${questions.length}几个问题,有${answer.length}个标准问\n` + `正确匹配了${correct}个问题 ` + '匹配正确率为：' + correct / total);
 }
 
 getAccuracy();
