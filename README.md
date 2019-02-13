@@ -117,6 +117,8 @@ def getCosineSimilarity(str1, str2):
 
 > word vector: token_vector.bin test result: correctly matched 900 questions, Correct rate is: 0.683371298405467
 
+> 去除停用词之后，匹配正确的数量提升到964道，正确率为0.7319665907365224
+
 ```python
 class SimTokenVec:
 
@@ -131,7 +133,15 @@ class SimTokenVec:
             return self.model[word]
         except:
             return np.zeros(200)
-
+     '''去除停用词'''
+     def deleteStopWord(self, text):
+        rightText = []
+        stopWord = getStopWord()
+        for str in text:
+            #print (str)
+            if stopWord.count(str) == 0:
+                rightText.append(str)
+        return rightText
     '''基于余弦相似度计算句子之间的相似度，句子向量等于字符向量求平均'''
     def similarity_cosine(self, word_list1,word_list2):# 给予余弦相似度的相似度计算
         vector1 = np.zeros(200) # 返回具有输入形状和类型的零数组
@@ -153,6 +163,8 @@ class SimTokenVec:
     def distance(self, text1, text2):# 相似性计算主函数
         word_list1=[word for word in text1]
         word_list2=[word for word in text2]
+        word_list1 = self.deleteStopWord(word_list1)
+        word_list2 = self.deleteStopWord(word_list2)
         return self.similarity_cosine(word_list1,word_list2)
 ```
 
