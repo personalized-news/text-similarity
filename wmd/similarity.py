@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 # coding: utf-8
-# 正确匹配857题
 from time import time
 import os
 from gensim.models import KeyedVectors
