@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # coding: utf-8
-# 正确匹配857题
+#正确匹配了 925 题
+#正确率为： 0.7023538344722855
 from time import time
 import os
 from gensim.models import KeyedVectors
