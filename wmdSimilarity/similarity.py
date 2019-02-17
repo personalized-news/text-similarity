@@ -21,10 +21,10 @@ logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s')
 start = time()
 
 
-if not os.path.exists('../model/token_vector.bin'):
-    raise ValueError("SKIP: model/token_vector.bin 不存在")
+if not os.path.exists('../token_vector.bin'):
+    raise ValueError("SKIP: token_vector.bin 不存在")
 
-model = KeyedVectors.load_word2vec_format('../model/token_vector.bin', binary=False)
+model = KeyedVectors.load_word2vec_format('./token_vector.bin', binary=False)
 
 print('Cell took %.2f seconds to run.' % (time() - start))
 
